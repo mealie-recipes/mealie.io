@@ -16,7 +16,7 @@
           </p>
         </div>
         <div class="mt-12 mb-12">
-          <img class="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="/mealie-recent.png" alt="" />
+          <img class="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="~/assets/mealie-recent.png" alt="" />
         </div>
       </div>
     </div>
