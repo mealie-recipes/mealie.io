@@ -92,5 +92,8 @@ export default {
       features,
     };
   },
+  head: {
+    title: "Mealie.io",
+  },
 };
 </script>
