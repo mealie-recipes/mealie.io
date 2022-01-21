@@ -8,7 +8,7 @@
             <span class="sr-only">Workflow</span>
           </a>
           <div class="flex-shrink-0 flex items-center">
-            <img class="h-8 w-auto" src="~/assets/header-logo.png" alt="Workflow" />
+            <img class="h-8 w-auto" src="~/assets/header-logo.webp" alt="Workflow" />
           </div>
         </div>
         <div class="-my-2 ml-auto md:hidden">

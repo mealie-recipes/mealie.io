@@ -1,7 +1,7 @@
 <template>
   <div>
     <Banner />
-    <AppToolbar />
+    <AppToolbar class="shadow-2xl sticky top-0 z-50" />
     <AppHero />
 
     <!-- First Section -->
@@ -16,7 +16,7 @@
           </p>
         </div>
         <div class="mt-12 mb-12">
-          <img class="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="~/assets/mealie-recent.png" alt="" />
+          <img class="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="~/assets/mealie-recent.webp" alt="" />
         </div>
       </div>
     </div>
