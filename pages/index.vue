@@ -21,8 +21,10 @@
       </div>
     </div>
 
+    <AppFeatureHighlights />
+
     <!-- Features Section -->
-    <div class="relative bg-white py-16 sm:py-24 lg:py-32">
+    <div class="relative bg-gray-50 py-16 sm:py-24">
       <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <h2 class="text-base font-semibold tracking-wider text-primary-600 uppercase">Tons of Features</h2>
         <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">More Than You'll Ever Need</p>
@@ -56,6 +58,7 @@
 
 <script>
 import { CloudUploadIcon, CogIcon, RefreshIcon, ServerIcon, ShieldCheckIcon, UserIcon } from "@heroicons/vue/outline";
+import AppFeatureHighlights from "~~/components/AppFeatureHighlights.vue";
 
 const features = [
   {
@@ -87,6 +90,7 @@ const features = [
 ];
 
 export default {
+  components: { AppFeatureHighlights },
   setup() {
     return {
       features,
