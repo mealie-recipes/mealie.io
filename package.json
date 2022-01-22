@@ -15,7 +15,9 @@
     "@headlessui/vue": "^1.4.2",
     "@heroicons/vue": "^1.0.5",
     "@tailwindcss/aspect-ratio": "^0.4.0",
-    "@tailwindcss/forms": "^0.4.0"
+    "@tailwindcss/forms": "^0.4.0",
+    "@vueuse/core": "^7.5.4",
+    "animate.css": "^4.1.1"
   },
   "prettier": {
     "trailingComma": "es5",

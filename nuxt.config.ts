@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
-  css: ["@/assets/css/styles.css"],
+  css: ["@/assets/css/styles.css", "animate.css/animate.min.css"],
   build: {
     postcss: {
       postcssOptions: require("./postcss.config.js"),

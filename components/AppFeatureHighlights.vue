@@ -49,13 +49,16 @@
       <div class="mt-12 sm:mt-16 lg:mt-0">
         <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
           <img
+            ref="imageFirst"
             class="
+              animate__animated
               w-full
               rounded-xl
               shadow-xl
               ring-1 ring-black ring-opacity-5
               lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none
             "
+            :class="isImageFirstVisible ? 'animate__backInRight' : ''"
             src="~assets/mealie-recipe-editor.webp "
             alt="Inbox user interface"
           />
@@ -104,13 +107,16 @@
         <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
           <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
             <img
+              ref="imageSecond"
               class="
+                animate__animated
                 w-full
                 rounded-xl
                 shadow-xl
                 ring-1 ring-black ring-opacity-5
                 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none
               "
+              :class="isImageSecondVisible ? 'animate__backInLeft' : ''"
               src="~assets/mealie-nlp-parser.webp"
               alt="Customer profile user interface"
             />
@@ -121,13 +127,39 @@
   </div>
 </template>
 
-<script>
-import { ArchiveIcon, PencilAltIcon } from "@heroicons/vue/outline";
+<script setup lang="ts">
+</script>
 
-export default {
+<script lang="ts">
+import { ArchiveIcon, PencilAltIcon } from "@heroicons/vue/outline";
+import { useElementVisibility, watchOnce } from "@vueuse/core";
+
+export default defineComponent({
+  name: "AppFeatureHighlights",
   components: {
     ArchiveIcon,
     PencilAltIcon,
   },
-};
+  setup() {
+    // Image First
+    const imageFirst = ref(null);
+    const imageFirstVisibility = useElementVisibility(imageFirst);
+    const isImageFirstVisible = ref(false);
+
+    watchOnce(imageFirstVisibility, () => {
+      isImageFirstVisible.value = imageFirstVisibility.value;
+    });
+
+    // Image Second
+    const imageSecond = ref(null);
+    const imageSecondVisibility = useElementVisibility(imageSecond);
+    const isImageSecondVisible = ref(false);
+
+    watchOnce(imageSecondVisibility, () => {
+      isImageSecondVisible.value = imageSecondVisibility.value;
+    });
+
+    return { imageSecond, imageFirst, isImageSecondVisible, isImageFirstVisible };
+  },
+});
 </script>

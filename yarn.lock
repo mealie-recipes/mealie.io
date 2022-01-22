@@ -915,10 +915,25 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.26.tgz#7acd1621783571b9a82eca1f041b4a0a983481d9"
   integrity sha512-vPV6Cq+NIWbH5pZu+V+2QHE9y1qfuTq49uNWw4f7FDEeZaDU2H2cx5jcUZOAKW7qTrUS4k6qZPbMy1x4N96nbA==
 
+"@vueuse/core@^7.5.4":
+  version "7.5.4"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-7.5.4.tgz#c515c6795f1b8ab9a50e62e2f1aa75aac5f1ca14"
+  integrity sha512-PKmyHN2lZuttGgKmsoMMqiSojSYYKraszilP0gpQIGcLt2YoLABaG3VFjdPs2tY6DM+HG3o70HuzOMEQCY8fqQ==
+  dependencies:
+    "@vueuse/shared" "7.5.4"
+    vue-demi "*"
+
 "@vueuse/head@^0.7.4":
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-0.7.4.tgz#2eec185ebe52e634400dfe2a8b1a18f788c06bcf"
   integrity sha512-cmps+wrdgL77V72vtjU6kaAunkG6GhswaMIQoh7Twc52ql4/p7i1Amd31LqnnvNF/bfuvzcXgYvsH8I7kimZmA==
+
+"@vueuse/shared@7.5.4":
+  version "7.5.4"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-7.5.4.tgz#4285e5c47fe5f2d608f115bf2aa26154f474e881"
+  integrity sha512-750RnGUEgg1+K4jGVkv7M5UOStAa/IjAInV6BugyBOvRYL2l1lcIDUi4V/qIKTlhd2oUAByCEnlqIpFD2a3tfw==
+  dependencies:
+    vue-demi "*"
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -1145,6 +1160,11 @@ alphanum-sort@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
+
+animate.css@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-4.1.1.tgz#614ec5a81131d7e4dc362a58143f7406abd68075"
+  integrity sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==
 
 ansi-html-community@0.0.8:
   version "0.0.8"
@@ -5351,6 +5371,11 @@ vue-bundle-renderer@^0.3.4:
   integrity sha512-WKYTMMugT/rU5/CLOMGo2TIeYMY4hv8Z+s8PwK4BxgyFaj34pJ3V9zkEMwX8b9P7QSGjw+9zMRvbq6vtlGPnfA==
   dependencies:
     bundle-runner "^0.0.1"
+
+vue-demi@*:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.12.1.tgz#f7e18efbecffd11ab069d1472d7a06e319b4174c"
+  integrity sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==
 
 vue-loader@^17.0.0:
   version "17.0.0"
