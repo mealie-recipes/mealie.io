@@ -10,8 +10,8 @@ export interface SiteConstants {
 
 export const useConstants = () => {
   return {
-    siteName: "Nuxt.js",
-    siteDescription: "Nuxt.js is a framework for building modern web applications with Vue.js and Nuxt.js.",
+    siteName: "Mealie.io",
+    siteDescription: "Mealie is a platform for managing and sharing recipes.",
     siteUrl: "https://hay-kot.dev",
     demoUrl: "https://demo.mealie.io",
 
