@@ -16,7 +16,13 @@
           </p>
         </div>
         <div class="mt-12 mb-12">
-          <img class="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="~/assets/mealie-recent.webp" alt="" />
+          <img
+            ref="mealieMain"
+            :class="isMealieMainVisible ? 'animate__backInUp' : ''"
+            class="animate__animated rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
+            src="~assets/mealie-recent.webp"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -56,9 +62,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { CloudUploadIcon, CogIcon, RefreshIcon, ServerIcon, ShieldCheckIcon, UserIcon } from "@heroicons/vue/outline";
 import AppFeatureHighlights from "~~/components/AppFeatureHighlights.vue";
+import { useElementVisibility, watchOnce } from "@vueuse/core";
 
 const features = [
   {
@@ -92,7 +99,17 @@ const features = [
 export default {
   components: { AppFeatureHighlights },
   setup() {
+    const mealieMain = ref(null);
+    const mealieMainVisibility = useElementVisibility(mealieMain);
+    const isMealieMainVisible = ref(false);
+    watchOnce(mealieMainVisibility, () => {
+      isMealieMainVisible.value = mealieMainVisibility.value;
+    });
+
     return {
+      mealieMain,
+      isMealieMainVisible,
+
       features,
     };
   },

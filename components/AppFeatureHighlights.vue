@@ -58,7 +58,7 @@
               ring-1 ring-black ring-opacity-5
               lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none
             "
-            :class="isImageFirstVisible ? 'animate__backInRight' : ''"
+            :class="isImageFirstVisible ? 'animate__backInUp' : ''"
             src="~assets/mealie-recipe-editor.webp "
             alt="Inbox user interface"
           />
@@ -116,7 +116,7 @@
                 ring-1 ring-black ring-opacity-5
                 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none
               "
-              :class="isImageSecondVisible ? 'animate__backInLeft' : ''"
+              :class="isImageSecondVisible ? 'animate__backInUp' : ''"
               src="~assets/mealie-nlp-parser.webp"
               alt="Customer profile user interface"
             />

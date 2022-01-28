@@ -8,7 +8,7 @@
             <span class="sr-only">Mealie</span>
           </a>
           <div class="flex-shrink-0 flex items-center">
-            <img class="h-10 w-auto" src="~/assets/header-logo.webp" alt="Mealie" />
+            <img class="h-10 w-auto" src="~assets/header-logo.webp" alt="Mealie" />
           </div>
         </div>
 
