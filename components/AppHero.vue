@@ -1,65 +1,39 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="bg-white py-4 sm:py-10 md:py-16 lg:py-20">
-    <main class="mx-auto max-w-7xl px-4">
-      <div class="text-center">
-        <h1 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+  <div class="bg-white py-4 sm:py-10 md:py-16 lg:py-20 lg:pt-12">
+    <main class="mx-auto max-w-7xl px-4 md:flex">
+      <div class="text-center md:text-left">
+        <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
           <span class="block xl:inline"> Recipe management </span>
           {{ " " }}
-          <span class="block text-primary xl:inline"> for the modern household </span>
+          <span class="block text-primary"> for the modern household </span>
         </h1>
-        <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-4xl">
-          Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend
-          application built in Vue for a pleasant user experience for the whole family. 
+        <p class="mx-auto mt-3 mr-auto max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-4xl md:text-xl">
+          Mealie is an intuitive and easy to use recipe management app. It's designed to make your life easier by being
+          the best recipes management experience on the web and providing you with an easy to use interface to manage
+          your growing collection of recipes.
         </p>
-        <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-          <div class="rounded-md shadow">
+        <div class="mt-5 flex w-full items-center justify-center space-x-2 sm:space-x-3 md:mt-8 md:justify-start">
+          <div class="rounded-md">
             <a
               href="https://docs.mealie.io/"
-              class="
-                w-full
-                flex
-                items-center
-                justify-center
-                px-8
-                py-3
-                border border-transparent
-                text-base
-                font-medium
-                rounded-md
-                text-white
-                bg-primary
-                hover:bg-primary-200
-                md:py-4 md:text-lg md:px-10
-              "
+              class="flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-8 py-3 text-base font-medium text-white shadow-lg hover:bg-primary-200 md:py-4 md:px-10 md:text-lg"
             >
               Get started
             </a>
           </div>
-          <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+          <div class="rounded-md">
             <a
               href="https://demo.mealie.io"
-              class="
-                w-full
-                flex
-                items-center
-                justify-center
-                px-8
-                py-3
-                border border-transparent
-                text-base
-                font-medium
-                rounded-md
-                text-primary
-                bg-white
-                hover:bg-gray-50
-                md:py-4 md:text-lg md:px-10
-              "
+              class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-primary shadow-lg hover:bg-gray-50 md:py-4 md:px-10 md:text-lg"
             >
               Live demo
             </a>
           </div>
         </div>
+      </div>
+      <div class="align-center hidden justify-center md:flex">
+        <p>Hello World</p>
       </div>
     </main>
   </div>

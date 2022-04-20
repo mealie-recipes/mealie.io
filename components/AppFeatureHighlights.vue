@@ -1,11 +1,10 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="relative bg-white pt-16 pb-32 overflow-hidden">
-    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0">
+  <div class="relative overflow-hidden bg-white pt-16 pb-32">
+    <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+      <div class="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0">
         <div>
           <div>
-            <span class="h-12 w-12 rounded-md flex items-center justify-center bg-accent">
+            <span class="flex h-12 w-12 items-center justify-center rounded-md bg-accent">
               <ArchiveIcon class="h-6 w-6 text-white" aria-hidden="true" />
             </span>
           </div>
@@ -18,19 +17,7 @@
             <div class="mt-6">
               <a
                 href="https://beta.mealie.io/"
-                class="
-                  inline-flex
-                  px-4
-                  py-2
-                  border border-transparent
-                  text-base
-                  font-medium
-                  rounded-md
-                  shadow-sm
-                  text-white
-                  bg-primary
-                  hover:bg-primary-300
-                "
+                class="inline-flex rounded-md border border-transparent bg-primary px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-primary-300"
               >
                 Try It Out
               </a>
@@ -47,30 +34,25 @@
       </div>
 
       <div class="mt-12 sm:mt-16 lg:mt-0">
-        <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-          <img
-            ref="imageFirst"
-            class="
-              animate__animated
-              w-full
-              rounded-xl
-              shadow-xl
-              ring-1 ring-black ring-opacity-5
-              lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none
-            "
-            :class="isImageFirstVisible ? 'animate__backInUp' : ''"
-            src="~assets/mealie-recipe-editor.webp "
-            alt="Inbox user interface"
-          />
+        <div class="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0" ref="imageFirst">
+          <TransitionFlyLeft>
+            <img
+              v-show="isImageFirstVisible"
+              class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+              style="transition-delay: 0.25s"
+              src="~assets/mealie-recipe-editor.webp "
+              alt="Inbox user interface"
+            />
+          </TransitionFlyLeft>
         </div>
       </div>
     </div>
     <div class="mt-24">
-      <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-48 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+      <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+        <div class="mx-auto max-w-xl px-4 sm:px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-48 lg:px-0">
           <div>
             <div>
-              <span class="h-12 w-12 rounded-md flex items-center justify-center bg-accent">
+              <span class="flex h-12 w-12 items-center justify-center rounded-md bg-accent">
                 <PencilAltIcon class="h-6 w-6 text-white" aria-hidden="true" />
               </span>
             </div>
@@ -84,19 +66,7 @@
               <div class="mt-6">
                 <a
                   href="https://beta.mealie.io/admin/parser"
-                  class="
-                    inline-flex
-                    px-4
-                    py-2
-                    border border-transparent
-                    text-base
-                    font-medium
-                    rounded-md
-                    shadow-sm
-                    text-white
-                    bg-primary
-                    hover:bg-primary-300
-                  "
+                  class="inline-flex rounded-md border border-transparent bg-primary px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-primary-300"
                 >
                   Try It Out
                 </a>
@@ -104,22 +74,16 @@
             </div>
           </div>
         </div>
-        <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-          <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-            <img
-              ref="imageSecond"
-              class="
-                animate__animated
-                w-full
-                rounded-xl
-                shadow-xl
-                ring-1 ring-black ring-opacity-5
-                lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none
-              "
-              :class="isImageSecondVisible ? 'animate__backInUp' : ''"
-              src="~assets/mealie-nlp-parser.webp"
-              alt="Customer profile user interface"
-            />
+        <div class="mt-12 sm:mt-16 lg:col-start-1 lg:mt-0">
+          <div class="-ml-48 pr-4 sm:pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0" ref="imageSecond">
+            <TransitionFlyRight>
+              <img
+                v-show="isImageSecondVisible"
+                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 delay-500 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="~assets/mealie-nlp-parser.webp"
+                alt="Customer profile user interface"
+              />
+            </TransitionFlyRight>
           </div>
         </div>
       </div>
@@ -128,38 +92,12 @@
 </template>
 
 <script setup lang="ts">
-</script>
-
-<script lang="ts">
 import { ArchiveIcon, PencilAltIcon } from "@heroicons/vue/outline";
-import { useElementVisibility, watchOnce } from "@vueuse/core";
+import { useIntersectOnce } from "~~/composables/use-intersect-once";
 
-export default defineComponent({
-  name: "AppFeatureHighlights",
-  components: {
-    ArchiveIcon,
-    PencilAltIcon,
-  },
-  setup() {
-    // Image First
-    const imageFirst = ref(null);
-    const imageFirstVisibility = useElementVisibility(imageFirst);
-    const isImageFirstVisible = ref(false);
+const imageFirst = ref<null | HTMLElement>(null);
+const isImageFirstVisible = useIntersectOnce()(imageFirst);
 
-    watchOnce(imageFirstVisibility, () => {
-      isImageFirstVisible.value = imageFirstVisibility.value;
-    });
-
-    // Image Second
-    const imageSecond = ref(null);
-    const imageSecondVisibility = useElementVisibility(imageSecond);
-    const isImageSecondVisible = ref(false);
-
-    watchOnce(imageSecondVisibility, () => {
-      isImageSecondVisible.value = imageSecondVisibility.value;
-    });
-
-    return { imageSecond, imageFirst, isImageSecondVisible, isImageFirstVisible };
-  },
-});
+const imageSecond = ref<null | HTMLElement>(null);
+const isImageSecondVisible = useIntersectOnce()(imageSecond);
 </script>

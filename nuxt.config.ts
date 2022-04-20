@@ -24,10 +24,16 @@ export default defineNuxtConfig({
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
-  css: ["@/assets/css/styles.css", "animate.css/animate.min.css"],
+  buildModules: ["@vueuse/nuxt"],
+  css: ["@/assets/css/styles.css"],
   build: {
     postcss: {
-      postcssOptions: require("./postcss.config.js"),
+      postcssOptions: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        }
+      },
     },
   },
 });
