@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="align-center hidden justify-center md:flex">
-        <p>Hello World</p>
+        <p></p>
       </div>
     </main>
   </div>
