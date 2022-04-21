@@ -37,7 +37,7 @@
         <div class="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0" ref="imageFirst">
           <TransitionFlyLeft>
             <img
-              lazy
+              loading="lazy"
               v-show="isImageFirstVisible"
               class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
               style="transition-delay: 0.25s"
@@ -79,7 +79,7 @@
           <div class="-ml-48 pr-4 sm:pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0" ref="imageSecond">
             <TransitionFlyRight>
               <img
-                lazy
+                loading="lazy"
                 v-show="isImageSecondVisible"
                 class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 delay-500 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                 src="~assets/mealie-nlp-parser.webp"
