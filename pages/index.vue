@@ -57,6 +57,7 @@
         <div class="mt-12 mb-12 min-h-[300px]" ref="mealieMain">
           <FlyIntersector>
             <img
+              lazy
               v-if="isMealieMainVisible"
               ref="mealieMain"
               class="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
