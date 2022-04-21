@@ -113,8 +113,14 @@
 
 <script lang="ts" setup>
 import { CloudUploadIcon, CogIcon, RefreshIcon, ServerIcon, ShieldCheckIcon, UserIcon } from "@heroicons/vue/outline";
+import { useHead } from "@vueuse/head";
 import AppFeatureHighlights from "~~/components/AppFeatureHighlights.vue";
 import { useIntersectOnce } from "~~/composables/use-intersect-once";
+
+useHead({
+  title: "Mealie.io",
+  meta: [{ name: "description", content: "A simple, fast, and easy way to create and share recipes." }],
+});
 
 const coreFeature = [
   {
