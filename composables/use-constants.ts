@@ -13,7 +13,8 @@ export const useConstants = () => {
     siteName: "Mealie.io",
     siteDescription: "Mealie is a platform for managing and sharing recipes.",
     siteUrl: "https://hay-kot.dev",
-    demoUrl: "https://demo.mealie.io",
+    docs: "https://nightly.mealie.io",
+    demoUrl: "https://beta.mealie.io",
 
     year: new Date().getFullYear(),
 

@@ -1,12 +1,25 @@
 <template>
   <div>
-    <Banner />
+    <!-- <Banner /> -->
+    <AppToolbar />
+
     <AppHero />
 
+    <svg class="-mt-10 fill-gray-900 md:-mt-32 lg:-mt-48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        d="M0,288L80,272C160,256,320,224,480,224C640,224,800,256,960,234.7C1120,213,1280,139,1360,101.3L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        data-darkreader-inline-fill=""
+      ></path>
+    </svg>
+
     <!-- Core Features -->
-    <div class="bg-gray-900">
+    <div class="bg-gray-900 py-16">
+      <h2 class="my-auto mt-2 text-center text-3xl font-extrabold tracking-tight text-gray-200 sm:text-4xl">
+        Core Features
+      </h2>
+
       <div
-        class="mx-auto flex max-w-7xl flex-col justify-center space-y-4 py-8 px-4 sm:px-6 md:flex-row md:space-y-0 md:space-x-4 lg:py-24 lg:px-8"
+        class="mx-auto flex max-w-7xl flex-col justify-center space-y-4 px-4 sm:px-6 md:flex-row md:space-y-0 md:space-x-4 lg:py-12 lg:px-8"
       >
         <div
           v-for="feat in coreFeature"
@@ -28,13 +41,14 @@
         </div>
       </div>
     </div>
+    <div class="hover: h-1 bg-primary"></div>
 
     <!-- First Section -->
-    <div class="relative overflow-hidden bg-gray-50 pt-16">
+    <div class="relative overflow-hidden bg-gray-900 pt-16">
       <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <div>
-          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Beautiful Recipe Feeds</h2>
-          <p class="mx-auto mt-5 max-w-prose text-xl text-gray-500">
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-200 sm:text-4xl">Beautiful Recipe Feeds</h2>
+          <p class="mx-auto mt-5 max-w-prose text-xl text-gray-200">
             When you first login to Mealie, you'll see a new page that displays the latest recipes so you can see what's
             new in your group. Scroll through your recipes and find exactly what's for dinner today and the rest of the
             week.
@@ -53,6 +67,13 @@
         </div>
       </div>
     </div>
+
+    <svg class="fill-gray-900 md:-mt-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        d="M0,288L80,272C160,256,320,224,480,224C640,224,800,256,960,234.7C1120,213,1280,139,1360,101.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+        data-darkreader-inline-fill=""
+      ></path>
+    </svg>
 
     <AppFeatureHighlights />
 
@@ -101,14 +122,14 @@ const coreFeature = [
     text: "Mealie is self-hostable, meaning you can run it on your own server without any reliance on cloud-services",
   },
   {
-    icon: UserIcon,
-    title: "Family Friendly",
-    text: "An easy to use interface that's familiar to everyone, regardless of their age or background",
-  },
-  {
     icon: CloudUploadIcon,
     title: "Import Recipes",
     text: "Import recipes using the built in recipe scraper and get access to thousands of recipes from around the web",
+  },
+  {
+    icon: UserIcon,
+    title: "Family Friendly",
+    text: "An easy to use interface that's familiar to everyone, regardless of their age or background",
   },
 ];
 
@@ -159,5 +180,11 @@ const isMealieMainVisible = useIntersectOnce()(mealieMain);
 .fly-leave-active {
   position: absolute;
   transform: translateY(30px);
+}
+
+.custom-shape-divider-top-1650507236 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 </style>
