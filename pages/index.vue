@@ -18,12 +18,12 @@
 
     <!-- Core Features -->
     <div class="bg-gray-900 py-16">
-      <h2 class="my-auto mt-2 text-center text-3xl font-extrabold tracking-tight text-gray-200 sm:text-4xl">
+      <h2 class="my-auto pb-6 text-center text-3xl font-extrabold tracking-tight text-gray-200 sm:text-4xl">
         Core Features
       </h2>
 
       <div
-        class="mx-auto flex max-w-7xl flex-col justify-center space-y-4 px-4 sm:px-6 md:flex-row md:space-y-0 md:space-x-4 lg:py-12 lg:px-8"
+        class="mx-auto flex max-w-7xl flex-col items-center justify-center space-y-4 px-4 sm:px-6 md:flex-row md:space-y-0 md:space-x-4 lg:py-12 lg:px-8"
       >
         <div
           v-for="feat in coreFeature"

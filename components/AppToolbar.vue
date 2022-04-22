@@ -16,10 +16,10 @@
             <h1 class="ml-2 text-lg text-gray-600 sm:text-3xl">Mealie</h1>
           </div>
         </div>
-        <div class="items-bottom my-auto space-x-4 sm:ml-2 sm:space-x-2">
+        <div class="items-bottom my-auto space-x-1 sm:ml-2 sm:space-x-4">
           <a
             v-for="link in links"
-            class="text-md rounded-md p-2 px-3 tracking-wider text-gray-600 hover:bg-gray-200 hover:text-accent-700 sm:text-lg sm:font-semibold"
+            class="rounded-md p-1 px-2 text-sm tracking-wider text-gray-600 hover:bg-gray-200 hover:text-accent-700 sm:p-2 sm:px-3 sm:text-lg sm:font-semibold"
             :href="link.href"
           >
             {{ link.text }}
