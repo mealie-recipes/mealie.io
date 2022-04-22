@@ -4,11 +4,15 @@
     <AppToolbar />
 
     <AppHero />
+    <!-- <img
+      load="lazy"
+      src="~assets/mealie-mobile.png"
+      class="absolute top-40 right-5 -z-10 hidden max-h-[650] lg:right-[10rem] lg:block"
+    /> -->
 
     <svg class="-mt-10 fill-gray-900 md:-mt-32 lg:-mt-48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         d="M0,288L80,272C160,256,320,224,480,224C640,224,800,256,960,234.7C1120,213,1280,139,1360,101.3L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-        data-darkreader-inline-fill=""
       ></path>
     </svg>
 

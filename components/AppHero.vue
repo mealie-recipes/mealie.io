@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="lg:pt-18 bg-white py-4 sm:py-10 md:py-16 lg:py-20">
+  <div class="lg:pt-18 py-4 sm:py-10 md:py-16 lg:py-20">
     <main class="mx-auto flex max-w-7xl px-4">
       <div>
         <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
@@ -31,9 +31,6 @@
             </a>
           </div>
         </div>
-      </div>
-      <div class="align-center hidden justify-center md:flex">
-        <p></p>
       </div>
     </main>
   </div>
