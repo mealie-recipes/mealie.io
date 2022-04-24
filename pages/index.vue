@@ -2,13 +2,7 @@
   <div>
     <Banner />
     <AppToolbar />
-
     <AppHero />
-    <!-- <img
-      load="lazy"
-      src="~assets/mealie-mobile.png"
-      class="absolute top-40 right-5 -z-10 hidden max-h-[650] lg:right-[10rem] lg:block"
-    /> -->
 
     <svg class="-mt-10 fill-gray-900 md:-mt-32 lg:-mt-48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
@@ -25,24 +19,7 @@
       <div
         class="mx-auto flex max-w-7xl flex-col items-center justify-center space-y-4 px-4 sm:px-6 md:flex-row md:space-y-0 md:space-x-4 lg:py-12 lg:px-8"
       >
-        <div
-          v-for="feat in coreFeature"
-          class="flex h-[150px] w-[350px] justify-center space-x-2 p-2 text-white transition duration-500 ease-out hover:-translate-y-2"
-        >
-          <div
-            class="mb-auto mt-1 mr-1 flex h-16 w-16 min-w-[4rem] items-center justify-center rounded-full bg-accent p-2"
-          >
-            <component :is="feat.icon" class="h-8 grow text-white" aria-hidden="true" />
-          </div>
-          <div>
-            <div class="flex items-center pb-2">
-              <h4 class="text-lg text-gray-50">{{ feat.title }}</h4>
-            </div>
-            <p class="text-md text-gray-50">
-              {{ feat.text }}
-            </p>
-          </div>
-        </div>
+        <Feature v-for="feat in coreFeature" :feat="feat" />
       </div>
     </div>
     <div class="hover: h-1 bg-primary"></div>
@@ -83,45 +60,40 @@
     <AppFeatureHighlights />
 
     <!-- Features Section -->
-    <div class="relative bg-gray-50 py-16 sm:py-24">
-      <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-        <h2 class="text-base font-semibold uppercase tracking-wider text-primary-600">Tons of Features</h2>
-        <p class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">More Than You'll Ever Need</p>
-        <p class="mx-auto mt-5 max-w-prose text-xl text-gray-500">
+    <div class="relative bg-gray-900 py-16 sm:py-24">
+      <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <h2 class="text-center font-semibold uppercase tracking-wider text-primary-600">Tons of Features</h2>
+        <p class="mt-2 text-center text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          More Than You'll Ever Need
+        </p>
+        <p class="mx-auto mt-5 max-w-prose text-center text-xl text-gray-300">
           Mealie has a whole host of features that you'll love. From the ability to create and manage your own recipes,
           to the being able to share your recipes with your friends, you'll find what you need in Mealie.
         </p>
-        <div class="mt-12">
+        <div class="py-16">
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div v-for="feature in features" :key="feature.name" class="pt-6">
-              <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
-                <div class="-mt-6">
-                  <div>
-                    <span class="inline-flex items-center justify-center rounded-md bg-primary-500 p-3 shadow-lg">
-                      <component :is="feature.icon" class="h-6 w-6 text-white" aria-hidden="true" />
-                    </span>
-                  </div>
-                  <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">{{ feature.name }}</h3>
-                  <p class="mt-5 text-base text-gray-500">
-                    {{ feature.description }}
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Feature v-for="feat in features" :feat="feat" color="primary" />
           </div>
         </div>
       </div>
     </div>
+    <!-- <AppNewsLetter /> -->
   </div>
 </template>
 
 <script lang="ts" setup>
 import { CloudUploadIcon, CogIcon, RefreshIcon, ServerIcon, ShieldCheckIcon, UserIcon } from "@heroicons/vue/outline";
 import { useHead } from "@vueuse/head";
-import AppFeatureHighlights from "~~/components/AppFeatureHighlights.vue";
 import { useIntersectOnce } from "~~/composables/use-intersect-once";
 
 useHead({
+  script: [
+    {
+      defer: true,
+      src: "https://analytics.hay-kot.dev/js/plausible.js",
+      "data-domain": "mealie.io",
+    },
+  ],
   title: "Mealie.io",
   meta: [{ name: "description", content: "A simple, fast, and easy way to create and share recipes." }],
 });
@@ -146,29 +118,33 @@ const coreFeature = [
 
 const features = [
   {
-    name: "Import Recipes",
-    description: "Easily import recipes from sites around the web using the built in recipe scraper.",
+    title: "Import Recipes",
+    text: "Easily import recipes from sites around the web using the built in recipe scraper.",
     icon: CloudUploadIcon,
   },
   {
-    name: "Users",
-    description: "Add new users with sign-up links or simply create a new user in the admin panel.",
+    title: "Users",
+    text: "Add new users with sign-up links or simply create a new user in the admin panel.",
     icon: UserIcon,
   },
-  { name: "Groups", description: "Sort users into groups to share recipes with the whole family", icon: RefreshIcon },
   {
-    name: "Webhooks",
-    description: "Schedule webhooks to send notifications to 3rd party services with todays Meal Plan data.",
+    title: "Groups",
+    text: "Sort users into groups to share recipes with the whole family",
+    icon: RefreshIcon,
+  },
+  {
+    title: "Webhooks",
+    text: "Schedule webhooks to send notifications to 3rd party services with todays Meal Plan data.",
     icon: ShieldCheckIcon,
   },
   {
-    name: "Open API",
-    description: "an open gives you full control of the your data with interactive documentation",
+    title: "Open API",
+    text: "an open gives you full control of the your data with interactive documentation",
     icon: CogIcon,
   },
   {
-    name: "Automatic Backups",
-    description: "Keep your data safe with automatic backups in any format supported by Jinja2 templates",
+    title: "Automatic Backups",
+    text: "Keep your data safe with automatic backups in any format supported by Jinja2 templates",
     icon: ServerIcon,
   },
 ];

@@ -2,7 +2,7 @@
   <div>
     <slot />
   </div>
-  <Divider color="accent" large />
+  <div class="hover: h-1 bg-primary"></div>
   <AppFooter :nav="navigation" />
 </template>
 
@@ -89,7 +89,7 @@ const navigation: NavItem[] = [
   {
     name: "Projects",
     href: "/about/#projects",
-  },  
+  },
   {
     name: "Contact",
     href: "/contact",
