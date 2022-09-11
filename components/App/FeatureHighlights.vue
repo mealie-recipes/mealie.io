@@ -16,7 +16,7 @@
             </p>
             <div class="mt-6">
               <a
-                href="https://beta.mealie.io/"
+                href="https://demo.mealie.io/"
                 class="inline-flex rounded-md border border-transparent bg-primary px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-primary-300"
               >
                 Try It Out
@@ -66,7 +66,7 @@
               </p>
               <div class="mt-6">
                 <a
-                  href="https://beta.mealie.io/admin/parser"
+                  href="https://demo.mealie.io/admin/parser"
                   class="inline-flex rounded-md border border-transparent bg-primary px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-primary-300"
                 >
                   Try It Out

@@ -14,7 +14,7 @@ export const useConstants = () => {
     siteDescription: "Mealie is a platform for managing and sharing recipes.",
     siteUrl: "https://hay-kot.dev",
     docs: "https://nightly.mealie.io",
-    demoUrl: "https://beta.mealie.io",
+    demoUrl: "https://demo.mealie.io",
 
     year: new Date().getFullYear(),
 
